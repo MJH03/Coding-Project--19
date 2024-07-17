@@ -1,38 +1,44 @@
-.App {
+body {
+  background-color: brown;
+}
+h1 {
+  color: lightcyan;
+  font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: lightgray;
+  font-family: sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: lightgray;
+  font-family: sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img {
+  width: 700px;
 }
-
-.App-link {
-  color: #61dafb;
+i {
+  color: silver;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: right;
+  font-size: larger;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  text-indent: 10px;
+  color: lightcyan;
+  font-family: 'Times New Roman', Times, serif;
+}
+button {
+  background-color: silver;
+  color: brown;
+  font-family: sans-serif;
+  align-content: end;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+button:hover {
+  background-color: darkgray;
+  color: maroon;
+  font-family: sans-serif;
 }

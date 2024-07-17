@@ -1,6 +1,6 @@
 //U6899-7808
 import React from 'react'
-import './App.css'
+import './App.css' //Step 3: Added design in CSS
 import {Gallery} from './Gallery.js';
 import {useState} from 'react';
 
@@ -23,14 +23,18 @@ export default function Display(){
  return(
   <div>
       <h1>Epic Tours Display</h1>
-      <h2>{Tour.name}</h2>
+      <h2>{Tour.name}:</h2>
       <h3>({index + 1} of {Gallery.length})</h3>
-      <img  src={Tour.image} alt={Tour.info}/>
-      {cost && <i>${Tour.price}</i>}
-      {detail && <p>{Tour.info}</p>}
+      <center>
       <button onClick={handleClick}>Next</button>
       <button onClick={handleDetailClick}>{detail ? 'Show Less' : 'Read More'}</button>
       <button onClick={handleCostClick}>{cost ? 'Hide' : 'Show'} Cost</button>
+      </center>
+      {cost && <i>${Tour.price}</i>}
+      {detail && <p>{Tour.info}</p>}
+      <center>
+      <img  src={Tour.image} alt={Tour.info}/>
+      </center>
   </div>
  )
 }
