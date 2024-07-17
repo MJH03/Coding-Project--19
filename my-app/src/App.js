@@ -1,22 +1,36 @@
 //U6899-7808
+import React from 'react'
 import './App.css'
-import {Gallery} from './Gallery.js'
+import {Gallery} from './Gallery.js';
+import {useState} from 'react';
 
+//Step 2: Crafting the Tours Display
 export default function Display(){
-  let index = 0;
+  const [index, setIndex] = useState(0);
+  const [detail, setDetails] = useState(false);
+  const [cost, setCost] = useState(0);
 
     function handleClick(){
-        index = index + 1;
+        setIndex(index + 1)
+    }
+    function handleDetailClick(){
+      setDetails(!detail)
+    }
+    function handleCostClick(){
+      setCost(!cost)
     }
     let Tour = Gallery[index]
  return(
   <div>
       <h1>Epic Tours Display</h1>
       <h2>{Tour.name}</h2>
-      <h3>({index + 1} of {Tour.length})</h3>
+      <h3>({index + 1} of {Gallery.length})</h3>
       <img  src={Tour.image} alt={Tour.info}/>
-      <p>{Tour.info}</p>
-      <button onClick={handleClick}></button>
+      {cost && <i>${Tour.price}</i>}
+      {detail && <p>{Tour.info}</p>}
+      <button onClick={handleClick}>Next</button>
+      <button onClick={handleDetailClick}>{detail ? 'Show Less' : 'Read More'}</button>
+      <button onClick={handleCostClick}>{cost ? 'Hide' : 'Show'} Cost</button>
   </div>
  )
 }
